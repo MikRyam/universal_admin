@@ -19,7 +19,7 @@ import MainLayout from '@/layouts/MainLayout';
 // import SearchPage from '@/pages/SearchPage';
 // import ReportsPage from '@/pages/ReportsPage';
 import ErrorPage from '@/pages/ErrorPage';
-import { RequireAuth } from './helpers/RequireAuth';
+// import { RequireAuth } from './helpers/RequireAuth';
 import { ALL_MENU_ITEMS } from './constants/menuItems';
 import LoginPage from './pages/LoginPage';
 

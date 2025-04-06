@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setCredentials } from '@/features/auth/authSlice';
 import { useLoginMutation } from '@/api/rtk/endpoints/auth.api';
-import { Form, Input, Button, Spin } from 'antd';
+import { Form, Input, Button } from 'antd';
 import styles from './LoginPage.module.scss';
 
 
