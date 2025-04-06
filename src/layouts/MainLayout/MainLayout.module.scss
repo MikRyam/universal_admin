@@ -1,0 +1,23 @@
+@use '../../styles/variables' as *;
+@use '../../styles/theme' as *;
+
+.main-layout {
+    background-color: var(--content-bg);
+    color: var(--text-color);
+}
+
+.layout {
+    height: 100vh;
+    background-color: var(--content-bg);
+    color: var(--text-color);
+    display: flex;
+}
+
+.mainContent {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 16px;
+    background-color: var(--content-bg);
+    margin-left: 0;
+}

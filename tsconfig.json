@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Современный JS
+    "useDefineForClassFields": true, // Совместимость с последними стандартами
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], // Поддержка браузера и последних возможностей JS
+    "module": "ESNext", // ESM для Vite
+    "skipLibCheck": true, // Пропускает проверку типов в node_modules → быстрее сборка
+    "moduleResolution": "bundler", // Для корректной работы Vite
+    "allowImportingTsExtensions": true, // Возможность импорта .ts/.tsx файлов с расширением
+    "resolveJsonModule": true, // Импорт JSON файлов
+    "isolatedModules": true, // Обеспечивает совместимость с esbuild
+    "noEmit": true, // Не генерирует .js файлы (Vite берёт на себя)
+    "jsx": "react-jsx", // Для React 17+ (JSX без импорта React)
+    "strict": true, // Полная строгая типизация
+    "noUnusedLocals": true, // Предупреждает о неиспользуемых переменных
+    "noUnusedParameters": true, // Предупреждает о неиспользуемых аргументах функций
+    "noFallthroughCasesInSwitch": true, // Предотвращает случайное "проваливание" в switch
+    "baseUrl": ".", // Устанавливает корень для абсолютных импортов
+    "paths": {
+      "@/*": ["./src/*"] // Удобные импорты через @/
+    }
+  },
+  "include": ["src"], // Проверяет только исходный код
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ]
+// }

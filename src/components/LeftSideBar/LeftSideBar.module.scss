@@ -1,0 +1,72 @@
+@use '../../styles/variables' as *;
+@use '../../styles/theme' as *;
+
+.sidebar {
+    width: 200px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    box-shadow: 1px 0 0 0 var(--border-color);
+    position: relative;
+    z-index: 1;
+
+    &.collapsed {
+        width: 64px;
+    }
+}
+
+.userSection {
+    text-align: center;
+    padding: 16px;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--sidebar-bg);
+
+    &.collapsed {
+        padding: 12px;
+    }
+
+    .userName {
+        margin-top: 8px;
+        display: block;
+        color: var(--text-color);
+        font-weight: 500;
+    }
+}
+
+.sidebarFooter {
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    background-color: var(--sidebar-bg);
+    border-top: 1px solid var(--border-color);
+
+    &.collapsed {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        button {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        color: var(--text-color);
+
+        &:hover {
+            transform: scale(1.1);
+            color: var(--ant-color-primary);
+            background-color: var(--menu-item-hover);
+        }
+    }
+}
